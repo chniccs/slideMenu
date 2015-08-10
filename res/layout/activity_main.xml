@@ -5,8 +5,9 @@
     android:background="@drawable/bg"
     tools:context=".MainActivity" >
 
-    <com.yufenit.slidemenu.ui.SlideMenuView
+   <!--  <com.yufenit.slidemenu.ui.SlideMenuView
+        android:id="@+id/smv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent" /> -->
 
 </RelativeLayout>
