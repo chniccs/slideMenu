@@ -24,7 +24,7 @@ public class SlideMenuView extends ViewGroup {
 	private static BaseAdapter adapter;
 	private static List<Object> list;
 	
-	private onSlideMenuViewInit listener;
+	private static onSlideMenuViewInit listener;
 
 	public SlideMenuView(Context context) {
 		super(context);
@@ -187,19 +187,24 @@ public class SlideMenuView extends ViewGroup {
 	 * @param list 集合存储数据，不能为空
 	 */
 	//TODO  设置回调
-	public static void setAdapter_listView(BaseAdapter madapter,List<Object> mlist){
+	public static void setAdapter_listView(BaseAdapter madapter,List<Object> mlist,onSlideMenuViewInit mlistener){
 		System.out.println("setAdapter_listView执行了");
 		adapter=madapter;
 		list=mlist;
+		listener=mlistener;
 	}
 	
 	/**
-	 *  回调方法的接口
+	 * 回调方法的接口
 	 * @author Administrator
+	 * 
 	 *
 	 */
-	interface onSlideMenuViewInit{
-		
+	public interface onSlideMenuViewInit{
+		/**
+		 *  条目被点击的回调方法
+		 * @param position 当前被点击的条目的位置
+		 */
 		void onItemClick(int position);
 		
 	}
